@@ -33,10 +33,7 @@ button, input, textarea { font: inherit; }
   justify-content: space-between;
 }
 
-.brand {
-  font-weight: 800;
-  letter-spacing: 0.2px;
-}
+.brand { display: flex; align-items: center; }
 
 .nav {
   display: flex;
@@ -55,7 +52,8 @@ button, input, textarea { font: inherit; }
 }
 .nav .cta:hover { border-color: rgba(255,255,255,0.18); }
 
-.main { padding: 48px 0 72px; }
+/* 섹션 구분이 생기도록 패딩 조정 */
+.main { padding: 24px 0 72px; }
 
 .h1 {
   font-size: 44px;
@@ -68,8 +66,14 @@ button, input, textarea { font: inherit; }
   color: var(--muted);
   line-height: 1.7;
 }
-.section { margin-top: 28px; }
 
+/* 기존 section margin-top -> PPT식 섹션 구분선 */
+.section {
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* HERO */
 .hero {
   border: 1px solid var(--line);
   background: radial-gradient(900px 400px at 20% 0%, rgba(124, 92, 255, 0.25), transparent),
@@ -102,6 +106,7 @@ button, input, textarea { font: inherit; }
 }
 .btn.primary:hover { filter: brightness(1.02); }
 
+/* 기존 grid 유지(혹시 기존 페이지가 사용 중이면) */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -110,21 +115,47 @@ button, input, textarea { font: inherit; }
 }
 @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
 
+/* PPT 코드에서 쓰는 grid/stack 추가 */
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+@media (max-width: 900px) { .grid3 { grid-template-columns: 1fr; } }
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+@media (max-width: 900px) { .grid2 { grid-template-columns: 1fr; } }
+
+.stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+/* 카드 배경을 조금 더 정돈(PPT 톤) */
 .card {
   border: 1px solid var(--line);
-  background: rgba(255,255,255,0.03);
+  background: var(--card);
   border-radius: 16px;
   padding: 16px;
 }
 .card h3 { margin: 0 0 8px; font-size: 16px; }
 .card p { margin: 0; color: var(--muted); line-height: 1.65; }
 
+/* KPI (기존 유지) */
 .kpis { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 16px; }
 @media (max-width: 900px) { .kpis { grid-template-columns: 1fr; } }
 .kpi { border: 1px solid var(--line); border-radius: 16px; padding: 14px; background: rgba(255,255,255,0.03); }
 .kpi .label { color: var(--muted); font-size: 13px; }
 .kpi .value { font-size: 18px; font-weight: 750; margin-top: 6px; }
 
+/* 폼 (기존 유지) */
 .form {
   display: grid;
   gap: 10px;
@@ -143,6 +174,58 @@ button, input, textarea { font: inherit; }
 .field input:focus, .field textarea:focus { border-color: rgba(124,92,255,0.6); }
 .field textarea { min-height: 120px; resize: vertical; }
 
+/* PPT 스타일 타이포/유틸 */
+.eyebrow {
+  color: var(--muted);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.h2 {
+  font-size: 24px;
+  margin: 0 0 12px;
+  letter-spacing: -0.2px;
+}
+
+.h3 {
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text);
+  opacity: 0.92;
+  margin: 0;
+}
+
+.bullets {
+  margin: 12px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.muted { color: var(--muted); }
+
+/* CEO quote 섹션 */
+.quote {
+  padding: 56px 0;
+  border-top: 1px solid var(--line);
+}
+.quoteText {
+  font-size: 22px;
+  margin: 0 0 6px;
+  letter-spacing: -0.2px;
+}
+.quoteBy {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* footer */
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 22px 0;

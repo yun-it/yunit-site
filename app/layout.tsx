@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "yunit | CSO (제약 영업·마케팅 대행)",
-  description: "제약 CSO 영업대행, 학술지원, 런칭 전략, 리포팅까지. yunit.",
+  title: "YUNIT | Structure First",
+  description:
+    "YUNIT은 시장을 이해하고 처방의 구조를 설계하며 전략을 실행으로 완성합니다.",
 };
 
 export default function RootLayout({
@@ -15,14 +17,27 @@ export default function RootLayout({
       <body>
         <header className="site-header">
           <div className="container header-inner">
-            <Link href="/" className="brand">
-              yunit
+            <Link href="/" className="brand" aria-label="YUNIT 홈">
+             <Image
+              src="/logo.png"
+              alt="YUNIT"
+              width={0}
+              height={0}
+              sizes="100vw"
+              style={{ width: "160px", height: "auto" }}
+              priority
+            />
             </Link>
+
             <nav className="nav">
-              <Link href="/services">서비스</Link>
-              <Link href="/about">회사소개</Link>
+              <Link href="/">HOME</Link>
+              <Link href="/about">ABOUT</Link>
+              <Link href="/services">SERVICES</Link>
+              <Link href="/contact">CONTACT</Link>
+              <Link href="/privacy">PRIVACY</Link>
+
               <Link href="/contact" className="cta">
-                문의하기
+                Consult
               </Link>
             </nav>
           </div>
@@ -33,11 +48,12 @@ export default function RootLayout({
         <footer className="site-footer">
           <div className="container footer-inner">
             <div className="footer-left">
-              <div className="footer-brand">yunit</div>
+              <div className="footer-brand">YUNIT</div>
               <div className="footer-meta">
-                CSO (제약 영업·마케팅 대행) · Compliance 중심 운영
+                Structure First. 시장을 이해하고 구조를 설계하며 실행으로 완성합니다.
               </div>
             </div>
+
             <div className="footer-right">
               <Link href="/privacy">개인정보처리방침</Link>
             </div>

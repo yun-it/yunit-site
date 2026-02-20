@@ -17,7 +17,7 @@ export default function PrivacyPage() {
         <p>문의 처리 완료 후 내부 기준에 따라 보관 또는 삭제</p>
 
         <h3 style={{ marginTop: 14 }}>4. 문의</h3>
-        <p>contact@yunit.co.kr</p>
+        <p>ceo@yunitmed.com</p>
       </div>
     </>
   );
