@@ -14,6 +14,9 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
+        <div className="bg-orb one"></div>
+        <div className="bg-orb two"></div>
+
         <header className="site-header">
           <div className="container header-inner">
             <Link href="/" className="brand" aria-label="YUNIT 홈">
@@ -38,9 +41,7 @@ export default function RootLayout({
           </div>
         </header>
 
-        <main className="container main">
-          {children}
-        </main>
+        <main className="container main">{children}</main>
 
         <footer className="site-footer">
           <div className="container footer-inner">
