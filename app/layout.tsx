@@ -18,15 +18,13 @@ export default function RootLayout({
         <header className="site-header">
           <div className="container header-inner">
             <Link href="/" className="brand" aria-label="YUNIT 홈">
-             <Image
-              src="/logo.png"
-              alt="YUNIT"
-              width={0}
-              height={0}
-              sizes="100vw"
-              style={{ width: "160px", height: "auto" }}
-              priority
-            />
+              <Image
+                src="/logo.png"
+                alt="YUNIT"
+                width={160}
+                height={40}
+                priority
+              />
             </Link>
 
             <nav className="nav">
@@ -35,10 +33,6 @@ export default function RootLayout({
               <Link href="/services">SERVICES</Link>
               <Link href="/contact">CONTACT</Link>
               <Link href="/privacy">PRIVACY</Link>
-
-              <Link href="/contact" className="cta">
-                Consult
-              </Link>
             </nav>
           </div>
         </header>
@@ -49,8 +43,10 @@ export default function RootLayout({
           <div className="container footer-inner">
             <div className="footer-left">
               <div className="footer-brand">YUNIT</div>
+
               <div className="footer-meta">
-                Structure First. 시장을 이해하고 구조를 설계하며 실행으로 완성합니다.
+                Structure First. 시장을 이해하고 구조를 설계하며
+                실행으로 완성합니다.
               </div>
             </div>
 
