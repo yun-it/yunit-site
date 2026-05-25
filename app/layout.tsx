@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Link from "next/link";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "YUNIT | Structure First",
@@ -18,12 +17,14 @@ export default function RootLayout({
         <header className="site-header">
           <div className="container header-inner">
             <Link href="/" className="brand" aria-label="YUNIT 홈">
-              <Image
+              <img
                 src="/logo.png"
                 alt="YUNIT"
-                width={160}
-                height={40}
-                priority
+                style={{
+                  width: "180px",
+                  height: "auto",
+                  display: "block",
+                }}
               />
             </Link>
 
@@ -37,7 +38,9 @@ export default function RootLayout({
           </div>
         </header>
 
-        <main className="container main">{children}</main>
+        <main className="container main">
+          {children}
+        </main>
 
         <footer className="site-footer">
           <div className="container footer-inner">
