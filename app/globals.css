@@ -17,11 +17,33 @@ body {
   margin: 0;
   color: var(--text);
   font-family: sans-serif;
-  background:
-    radial-gradient(circle at 10% 10%, rgba(124, 92, 255, 0.2), transparent 28%),
-    radial-gradient(circle at 90% 20%, rgba(79, 140, 255, 0.16), transparent 24%),
-    #0b0c10;
   overflow-x: hidden;
+
+  background: linear-gradient(
+    -45deg,
+    #0b0c10,
+    #161a2d,
+    #1b1333,
+    #0b0c10
+  );
+
+  background-size: 400% 400%;
+
+  animation: gradientFlow 18s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 a {
@@ -123,10 +145,16 @@ a {
 .hero {
   border: 1px solid var(--line);
   background:
-    linear-gradient(135deg, rgba(124, 92, 255, 0.24), rgba(255, 255, 255, 0.04)),
+    linear-gradient(
+      135deg,
+      rgba(124, 92, 255, 0.24),
+      rgba(255, 255, 255, 0.04)
+    ),
     rgba(18, 20, 27, 0.82);
+
   border-radius: 28px;
   padding: 64px 52px;
+
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
@@ -213,12 +241,18 @@ a {
   background: rgba(255, 255, 255, 0.035);
   border-radius: 22px;
   padding: 26px;
-  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
+
   border-color: rgba(124, 92, 255, 0.42);
+
   background: rgba(255, 255, 255, 0.055);
 }
 
