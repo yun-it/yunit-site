@@ -2,8 +2,8 @@ export default function PrivacyPage() {
   return (
     <>
       <h1 className="h1">개인정보처리방침</h1>
-      <p className="p">
-        yunit은 문의 응대를 위해 최소한의 개인정보를 처리할 수 있습니다.
+      <p className="p" style={{ marginBottom: "24px" }}>
+      yunit은 원활한 고객 문의 응대 및 상담을 위해 최소한의 개인정보를 수집 및 처리하고 있습니다.
       </p>
 
       <div className="card section">

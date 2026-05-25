@@ -4,7 +4,7 @@ export default function HomePage() {
   return (
     <main className="container">
       <section className="hero">
-        <p className="eyebrow">YUNIT</p>
+        
 
         <h1 className="headline">
           본질은 약이 아닙니다.<br />
