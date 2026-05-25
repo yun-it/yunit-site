@@ -54,8 +54,8 @@ export default function RootLayout({
               <div className="footer-brand">YUNIT</div>
 
               <div className="footer-meta">
-                Structure First. 시장을 이해하고 구조를 설계하며
-                실행으로 완성합니다.
+                매출은 사람이 만듭니다. 성과는 구조가 만듭니다.
+
               </div>
             </div>
 
