@@ -40,15 +40,15 @@ a {
 
   background: linear-gradient(
     -45deg,
-    #0b0c10,
-    #161a2d,
-    #241346,
-    #10213f,
-    #0b0c10
+    #050816,
+    #172554,
+    #4c1d95,
+    #1e1b4b,
+    #0f172a
   );
 
-  background-size: 400% 400%;
-  animation: gradientFlow 16s ease infinite;
+  background-size: 500% 500%;
+  animation: gradientFlow 10s ease infinite;
 }
 
 @keyframes gradientFlow {
@@ -125,10 +125,15 @@ a {
 /* HERO */
 .hero {
   border: 1px solid var(--line);
-  background: rgba(18, 20, 27, 0.45);
+
+  background: rgba(18, 20, 27, 0.22);
+
   backdrop-filter: blur(10px);
+
   border-radius: 28px;
+
   padding: 64px 52px;
+
   box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
 }
 
@@ -233,9 +238,13 @@ a {
 /* CARD */
 .card {
   border: 1px solid var(--line);
-  background: rgba(18, 20, 27, 0.42);
+
+  background: rgba(18, 20, 27, 0.18);
+
   backdrop-filter: blur(10px);
+
   border-radius: 22px;
+
   padding: 26px;
 }
 
